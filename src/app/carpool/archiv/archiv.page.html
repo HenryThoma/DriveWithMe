@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>archiv</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="selectedCarpool| async as carpool">
+        <ion-list no-lines *ngFor="let ride of carpool.currentMonth">
+            <ion-item>
+                <ion-card>
+                    <ion-card-header>
+                        Fahrt am {{ride}}
+                    </ion-card-header>
+                </ion-card>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
