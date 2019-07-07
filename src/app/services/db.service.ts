@@ -1,8 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Carpool} from '../models/carpool';
 import * as localforage from 'localforage';
-import set = Reflect.set;
-import {Guid} from 'guid-typescript';
 
 @Injectable({
     providedIn: 'root'
