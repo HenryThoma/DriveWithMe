@@ -25,6 +25,7 @@ $fontSizeBtn: 15px;
   height: $buttonHeight;
   width: $buttonWidth;
   font-size: $fontSizeBtn;
+  background-color: black;
 }
 
 .icons {
@@ -40,4 +41,9 @@ $fontSizeBtn: 15px;
   margin: 10px;
   font-size: 275%;
   text-align: center;
+  color:white;
+}
+
+.background-image{
+  --background: url(../../assets/imgs/road.webp) 0 0/100% 100% no-repeat;
 }

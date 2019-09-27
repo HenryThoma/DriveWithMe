@@ -9,7 +9,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content *ngIf="selectedCarpool | async as carpool">
+<ion-content class="background-image" *ngIf="selectedCarpool | async as carpool">
     <div class="text">
         <div *ngIf="carpool.payment === perDrive">
             Diesen Monat bist du schon {{getRides(carpool.currentMonth)}} mal mit {{carpool.driver}} mitgefahren.
@@ -23,10 +23,10 @@
         </div>
     </div>
     <div class="buttons">
-        <ion-button class="btn" [routerLink]="['/carpool', 'archiv', carpool.id]">
+        <ion-button class="btn" color="dark" [routerLink]="['/carpool', 'archiv', carpool.id]">
             Zeige Fahrten
         </ion-button>
-        <ion-button class="btn" (click)="startDrive()">
+        <ion-button class="btn" color="dark" (click)="startDrive()">
             Los Fahren!!
         </ion-button>
     </div>
