@@ -6,16 +6,18 @@
 
 <ion-content>
   <p class="ion-padding-start ion-padding-end">
-    Choose your carpools to export:
+    Daten exportieren:
   </p>
 
   <ion-list>
-    <ion-item *ngFor="let entry of carpools$ | async">
-      <ion-checkbox slot="start" [(ngModel)]="checkedMap[entry.id]"></ion-checkbox>
-      <ion-label>{{entry.driver}}</ion-label>
+    <ion-item *ngFor="let carpool of carpools$ | async">
+      <ion-checkbox slot="start" [(ngModel)]="checkedMap[carpool.id]"></ion-checkbox>
+      <ion-label>{{carpool.driver}}</ion-label>
     </ion-item>
   </ion-list>
 
   <ion-button [disabled]="buttonDisabled(checkedMap)"
-  (click)="exportData()">Export Data</ion-button>
+              (click)="exportData()">
+    Export Daten
+  </ion-button>
 </ion-content>

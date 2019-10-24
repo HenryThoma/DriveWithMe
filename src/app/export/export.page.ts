@@ -19,8 +19,8 @@ export class ExportPage implements OnInit {
   buttonDisabled(checkedMap: {}) {
     let enabled = false;
 
-    for (const v of Object.values(checkedMap)) {
-      if (v) {
+    for (const isSelected of Object.values(checkedMap)) {
+      if (isSelected) {
         enabled = true;
       }
     }
@@ -32,8 +32,8 @@ export class ExportPage implements OnInit {
     const carpools = await this.carpools$;
 
     const selectedCarpools = Object.keys(this.checkedMap)
-        .filter(k => !!this.checkedMap[k])
-        .map(k => carpools.find(c => c.id === k));
+        .filter(carpoolId => !!this.checkedMap[carpoolId])
+        .map(carpoolId => carpools.find(c => c.id === carpoolId));
 
     this.createDownlableFile(selectedCarpools, 'carpools');
   }
