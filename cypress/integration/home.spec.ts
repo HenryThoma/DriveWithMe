@@ -17,7 +17,7 @@ context('home', () => {
     it('open AddCarpool', () => {
         openAddDlg();
     });
-    it('check required Fields', () => {
+    it.only('check required Fields', () => {
         openAddDlg();
         // Try Saving without insert
         checkAddDialogExists();
@@ -25,9 +25,16 @@ context('home', () => {
         cy.get('.carpoolDrive').type('TestFahrer').should('have.value', 'TestFahrer');
         checkAddDialogExists();
         cy.get('.carpoolDrive > .native-input').clear();
-        // Cant set ComboBox must fix later...
         cy.get('.ng-pristine > .native-input').clear().type('5').should('have.value', '5');
         checkAddDialogExists();
+        cy.get('.zahlart').click();
+        cy.get(':nth-child(2) > .picker-button').click();
+        checkAddDialogExists();
+    });
+    it('add a Carpool', () => {
+        openAddDlg();
+        cy.get('.carpoolDrive').type('TestFahrer').should('have.value', 'TestFahrer');
+        cy.get('.zahlart').then(option => option[0]);
     });
 });
 
