@@ -25,3 +25,5 @@ jobs:
         CI: true
     - name: Cypress.io
       uses: cypress-io/github-action@v1.16.1
+      with:
+        start: npm start
