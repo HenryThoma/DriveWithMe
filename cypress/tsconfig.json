@@ -1,13 +1,10 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "baseUrl": "../node_modules",
-    "target": "es5",
-    "lib": ["es5", "dom"],
-    "types": ["cypress"]
-  },
+  "extends": "../tsconfig.json",
   "include": [
-    "**/*.ts",
-    "../node_modules/cypress/types/mocha/index.d.ts"
+    "integration/*.ts",
+    "support/*.ts",
+    "../node_modules/cypress",
+    "./node_modules/cypress",
+    "cypress/**/*.js"
   ]
 }
