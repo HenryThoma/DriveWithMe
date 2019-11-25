@@ -12,8 +12,6 @@ jobs:
         node-version: [12.x]
 
     steps:
-    - name: Cypress.io
-      uses: cypress-io/github-action@v1.16.1
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -26,3 +24,5 @@ jobs:
         npm test
       env:
         CI: true
+    - name: Cypress.io
+      uses: cypress-io/github-action@v1.16.1
