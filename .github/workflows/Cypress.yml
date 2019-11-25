@@ -24,4 +24,4 @@ jobs:
       env:
         CI: true
     - name: Cypress.io
-      uses: cypress-io/github-action@v1.16.1k
+      uses: cypress-io/github-action@v1.16.1
