@@ -8,7 +8,7 @@
     "cy:run": "cypress run",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ionic build",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
