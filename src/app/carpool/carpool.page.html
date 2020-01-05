@@ -26,10 +26,10 @@
         <ion-button class="btn" color="dark" [routerLink]="['/carpool', 'archiv', carpool.id]">
             Zeige Fahrten
         </ion-button>
-        <ion-button class="btn" color="dark" (click)="startDrive()">
+        <ion-button class="btn" color="dark" (click)="startDrive()" [attr.cy-data]="'startRide'">
             Los Fahren!!
         </ion-button>
-        <ion-button class="btn" color="dark" (click)="billDrive()">
+        <ion-button class="btn" color="dark" (click)="billDrive()" [attr.cy-data]="'billRide'">
            Bezahlen
         </ion-button>
     </div>
