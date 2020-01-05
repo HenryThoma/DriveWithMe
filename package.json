@@ -48,6 +48,7 @@
     "now": "^16.7.1",
     "rxjs": "^6.5.4",
     "shelljs": "^0.8.3",
+    "tree-kill": "^1.2.2",
     "tslib": "^1.10.0",
     "zone.js": "~0.8.29"
   },
@@ -55,9 +56,9 @@
     "@angular-devkit/architect": "^0.13.9",
     "@angular-devkit/core": "^7.3.9",
     "@angular-devkit/schematics": "^7.3.9",
-    "@angular/cli": "^7.3.9",
-    "@angular/compiler": "^7.2.15",
-    "@angular/compiler-cli": "7.2.15",
+    "@angular/cli": "7.3.9",
+    "@angular/compiler": "8.2.14",
+    "@angular/compiler-cli": "^8.2.14",
     "@angular/language-service": "^7.2.15",
     "@cypress/webpack-preprocessor": "4.1.1",
     "@ionic/angular-toolkit": "~1.5.1",
@@ -80,7 +81,7 @@
     "ts-loader": "6.2.1",
     "ts-node": "~8.3.0",
     "tslint": "~5.17.0",
-    "typescript": "~3.1.6"
+    "typescript": "3.5.3"
   },
   "description": "DriveWithMe manages Carpools, how often you drive with someone and how much money you owe him or her at the end of one Month.",
   "cordova": {
