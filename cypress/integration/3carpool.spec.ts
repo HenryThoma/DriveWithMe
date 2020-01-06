@@ -10,15 +10,16 @@ context('carpool', () => {
     };
     const resetCosts = () => {
         openCarpoolPage();
-        cy.get('[cy-data=billRide]').first().click();
+        cy.wait(500);
+        cy.get('[cy-data=billRide]').click();
+        cy.get('[cy-data=payRide]').click();
+        cy.get('billingDialog').should('not.exist');
     };
     it('open Carpoolpage', () => {
         openCarpoolPage();
     });
-    it('start Ride ', () => {
+    it.only('start Ride ', () => {
         openCarpoolPage();
         resetCosts();
-       /* cy.get('[cy-data=startRide]').click();
-        cy.get('.price').should('include', '5');*/
     });
 });
