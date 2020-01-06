@@ -4,8 +4,8 @@
   "author": "Henry",
   "homepage": "https://DriveWithMe.surge.sh",
   "scripts": {
-    "cypress-open": "cypress open",
-    "cypress-run": "cypress run",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
