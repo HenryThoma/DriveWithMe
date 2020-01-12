@@ -1,4 +1,4 @@
-import {checkAddDialogExists, openAddDlg} from '../support/home.po';
+import {checkAddDialogExists, openAddDlg} from '../support/functions/home.po';
 
 describe('Home', () => {
     context('1080p Resolution', () => {

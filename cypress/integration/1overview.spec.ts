@@ -1,4 +1,4 @@
-import {openSidebar} from '../support/overview.po';
+import {openSidebar} from '../support/functions/overview.po';
 
 describe('overview', () => {
     context('1080p resolution', () => {

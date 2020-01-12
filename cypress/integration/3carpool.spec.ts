@@ -1,29 +1,30 @@
-context('carpool', () => {
-    const visitHome = () => {
-        cy.visit('/mitfahrzentrale');
-        cy.url().should('include', '/mitfahrzentrale');
-    };
-    const openCarpoolPage = () => {
-        visitHome();
-        cy.get('[cy-data=carpool0]').click();
-        cy.url().should('include', 'carpool');
-    };
-    const resetCosts = () => {
-        openCarpoolPage();
-        cy.wait(500);
-        cy.get('[cy-data=billRide]').click();
-        cy.get('[cy-data=payRide]').click();
-        cy.get('billingDialog').should('not.exist');
-    };
-    it('open Carpoolpage', () => {
-        openCarpoolPage();
+import {openCarpoolPage, resetCosts} from '../support/functions/carpool.po';
+
+describe('Carpool', () => {
+    context('1080p resolution', () => {
+        beforeEach(() => {
+            cy.viewport(1920, 1080);
+        });
+        it('start Ride ', () => {
+            openCarpoolPage();
+            resetCosts();
+            cy.wait(500);
+            cy.get('[cy-data=startRide]')
+                .click()
+                .click();
+        });
     });
-    it('start Ride ', () => {
-        openCarpoolPage();
-        resetCosts();
-        cy.wait(500);
-        cy.get('[cy-data=startRide]')
-            .click()
-            .click();
+    context('iphone-x', () => {
+        beforeEach(() => {
+            cy.viewport('iphone-x');
+        });
+        it('start Ride ', () => {
+            openCarpoolPage();
+            resetCosts();
+            cy.wait(500);
+            cy.get('[cy-data=startRide]')
+                .click()
+                .click();
+        });
     });
 });
