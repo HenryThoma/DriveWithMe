@@ -18,8 +18,12 @@ context('carpool', () => {
     it('open Carpoolpage', () => {
         openCarpoolPage();
     });
-    it.only('start Ride ', () => {
+    it('start Ride ', () => {
         openCarpoolPage();
         resetCosts();
+        cy.wait(500);
+        cy.get('[cy-data=startRide]')
+            .click()
+            .click();
     });
 });

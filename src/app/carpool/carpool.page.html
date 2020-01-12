@@ -18,7 +18,7 @@
             Diesen Monat bist du an {{getRides(carpool.currentMonth)}} Tagen mit {{carpool.driver}} mitgefahren.
         </div>
         <br>
-        <div class="price">
+        <div class="price" [attr.cy-data]="'[cy-data=price]'">
             Aktuell belaufen sich deine Spritkosten auf {{calculate(getRides(carpool.currentMonth), carpool.price)}}€
         </div>
     </div>
