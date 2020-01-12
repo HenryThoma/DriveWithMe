@@ -58,7 +58,7 @@
     "@angular/compiler": "^7.2.15",
     "@angular/compiler-cli": "7.2.15",
     "@angular/language-service": "^7.2.15",
-    "@cypress/webpack-preprocessor": "4.1.1",
+    "@cypress/webpack-preprocessor": "^4.1.1",
     "@ionic/angular-toolkit": "~1.5.1",
     "@ionic/lab": "2.0.5",
     "@types/jasmine": "~2.8.8",
