@@ -1,40 +1,46 @@
-import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {RouteReuseStrategy} from '@angular/router';
+import {NgModule} from '@angular/core';
 
-import {IonicModule, IonicRouteStrategy} from '@ionic/angular';
-import {SplashScreen} from '@ionic-native/splash-screen/ngx';
-import {StatusBar} from '@ionic-native/status-bar/ngx';
-
-import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {AddCarpoolComponent} from './add-carpool/add-carpool.component';
-import {FormsModule} from '@angular/forms';
-import {EditCarpoolComponent} from './edit-carpool/edit-carpool.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {BillingCheckDialogComponent} from './carpool/billing-check-dialog/billing-check-dialog.component';
+import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HomeComponent} from './home/home.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {AddCarpoolComponent} from './home/add-drive/add-carpool.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatButtonModule} from '@angular/material/button';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        AddCarpoolComponent,
-        EditCarpoolComponent,
-        BillingCheckDialogComponent
-    ],
-    entryComponents: [AddCarpoolComponent, EditCarpoolComponent, BillingCheckDialogComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    AddCarpoolComponent
+  ],
     imports: [
         BrowserModule,
-        IonicModule.forRoot(),
         AppRoutingModule,
-        FormsModule,
         BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatSidenavModule,
+        MatDialogModule,
+        MatSelectModule,
+        MatButtonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatCardModule
     ],
-    providers: [
-        StatusBar,
-        SplashScreen,
-        {provide: RouteReuseStrategy, useClass: IonicRouteStrategy}
-    ],
-    bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
