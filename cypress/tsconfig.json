@@ -5,6 +5,6 @@
     "support/*.ts",
     "../node_modules/cypress",
     "./node_modules/cypress",
-    "cypress/**/*.js", "integration/detail-page/carpool.spec.ts", "integration/home/home.spec.ts", "integration/overview/overview.spec.ts"
+    "cypress/**/*.js", "integration/3-detail-page/carpool.spec.ts", "integration/1-home/home.spec.ts",integration/2-overview/overview.spec.tsts"
   ]
 }
