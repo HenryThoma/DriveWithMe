@@ -1,4 +1,4 @@
-context('overview', () => {
+describe('overview', () => {
     it('visit Home', () => {
         cy.visit('');
         cy.get('[cy-data=home]').click();
