@@ -1,12 +1,10 @@
+
+import {visitPage} from './../helpfer.func'
 describe('overview', () => {
     it('visit Home', () => {
-        cy.visit('');
-        cy.get('[cy-data=home]').click();
-        cy.url().should('include', '/mitfahrzentrale');
+      visitPage('mitfahrzentrale')
     });
     it('visit Export', () => {
-        cy.visit('');
-        cy.get('[cy-data=export]').click();
-        cy.url().should('include', '/export');
+        visitPage('export');
     });
 });

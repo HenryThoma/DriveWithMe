@@ -29,3 +29,9 @@ export const openAddDlg = () => {
     cy.get('[cy-data=addCarpool]').click();
     cy.get('[cy-data=AddCarpoolDlg]').should('exist');
 };
+
+export const visitPage = (page:string) => {
+    cy.visit('');
+    cy.get('[cy-data='+page+']').click();
+    cy.url().should('include', '/'+page+'');
+}
