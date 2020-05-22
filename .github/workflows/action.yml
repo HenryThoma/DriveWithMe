@@ -29,4 +29,5 @@ jobs:
         start: npm start
     - name: Run Karma Tests
       uses: ahmedrizwan/angular-karma-test-action@v1.0.8
-      run: npm run test
+      with:
+        start: npm run test
