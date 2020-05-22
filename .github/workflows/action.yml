@@ -27,3 +27,5 @@ jobs:
       uses: cypress-io/github-action@v1.16.1
       with:
         start: npm start
+    - name: Run Karma Tests
+      uses: ahmedrizwan/angular-karma-test-action
