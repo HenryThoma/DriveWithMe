@@ -24,8 +24,8 @@ jobs:
       env:
         CI: true
     - name: Run Karma Tests
-        run: |
-          npm run test-headless
+      run: |
+        npm run test-headless
     - name: Cypress.io
       uses: cypress-io/github-action@v1.16.1
       with:
