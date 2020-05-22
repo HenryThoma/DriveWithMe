@@ -2,7 +2,7 @@
   "name": "DriveWithMe",
   "version": "1.0.1",
   "author": "Henry",
-  "homepage": "https://DriveWithMe.surge.sh",
+  "homepage": "https://DriveWithMe.now.sh",
   "scripts": {
     "cy:open": "cypress open",
     "cy:run": "cypress run",
