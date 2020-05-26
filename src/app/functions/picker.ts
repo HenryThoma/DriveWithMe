@@ -6,13 +6,8 @@ export async function openPicker(pickerCtrl: PickerController): Promise<ZahlArt>
     const zahlart: ZahlArt = {value: paymentArt.default, view: ''};
     const opts: PickerOptions = {
         buttons: [
-            {
-                text: 'Cancel',
-                role: 'cancel'
-            },
-            {
-                text: 'Fertig'
-            }
+            {text: 'Cancel', role: 'cancel'},
+            {text: 'Fertig'}
         ],
         columns: [
             {
