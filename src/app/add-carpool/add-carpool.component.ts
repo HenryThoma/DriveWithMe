@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {paymentArt} from '../models/paymentArt';
 import {DbService} from '../services/db.service';
 import {AlertController, ModalController, PickerController} from '@ionic/angular';
@@ -11,7 +11,7 @@ import {Carpool} from '../models/carpool';
     templateUrl: './add-carpool.component.html',
     styleUrls: ['./add-carpool.component.scss'],
 })
-export class AddCarpoolComponent implements OnInit {
+export class AddCarpoolComponent {
     public carpoolDriver = '';
     public zahlartView = 'Bitte wählen';
     public zahlartValue = paymentArt.default;
@@ -21,10 +21,6 @@ export class AddCarpoolComponent implements OnInit {
                 private modalCtrl: ModalController,
                 private pickerCtrl: PickerController,
                 private alertController: AlertController) {
-    }
-
-
-    ngOnInit() {
     }
 
     save() {
@@ -75,7 +71,7 @@ export class AddCarpoolComponent implements OnInit {
         };
         const picker = await this.pickerCtrl.create(opts);
         picker.present();
-        picker.onDidDismiss().then(async data => {
+        picker.onDidDismiss().then(async _ => {
             const col = await picker.getColumn('Zahlart');
             this.zahlartView = col.options[col.selectedIndex].text;
             this.zahlartValue = col.options[col.selectedIndex].value;
