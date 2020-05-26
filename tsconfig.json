@@ -19,5 +19,11 @@
       "dom"
     ]
   },
-  "types": ["cypress"]
+  "include": [
+    "./node_modules/cypress",
+    "cypress/**/*.ts"
+  ],
+  "types": [
+    "cypress"
+  ]
 }
