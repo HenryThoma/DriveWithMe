@@ -16,10 +16,10 @@ describe('overview', () => {
         beforeEach(() => {
             cy.viewport('iphone-x');
         });
-        it('visit Home', () => {
+        it('visit Home on Mobile', () => {
             visitPage('mitfahrzentrale', true);
         });
-        it('visit Export', () => {
+        it('visit Export on Mobile', () => {
             visitPage('export', true);
         });
     });

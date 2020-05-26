@@ -19,7 +19,7 @@ describe('Home', () => {
         it('check required Fields on Mobile', () => {
             checkRequiredFields();
         });
-        it('add a Carpool', () => {
+        it('add a Carpool on Mobile', () => {
            addCarpool();
         });
     });
